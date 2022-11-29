@@ -1,5 +1,5 @@
 var no_sem_subjects = 0;
-// when ever department is changed all rows are deleted except last & first two rows
+// whenever department is changed all rows are deleted except last & first two rows
 function checkdepartment(){
     var table = document.getElementById("myTable");
     var n = table.rows.length - 2;
@@ -43,36 +43,36 @@ function checksemester(){
     var civil_sems_subjects={
         3:["Building Materials and Concrete Technology","Building Planning and Drawing (Integrated)","Numerical Methods","Fluid Mechanics","Solid Mechanics I","Surveying","Solid Mechanics Laboratory","Surveying Laboratory"],    
         4:["Transportation Engineering","Structural Analysis","Hydraulics and Hydraulic Machinery","Soil Mechanics","Solid Mechanics II","Employability Skills I","Soil Mechanics Laboratory","Fluid Mechanics and Hydraulic Machinery Laboratory","CC & EC Activities I"],
-        5:["Hydrology (Integrated)","Design and Detailing of RC Structures (Integrated)","Environmental Engineering","Foundation Engineering","Career Path","Open Elective","Environmental Engineering Laboratory","Term Paper","Summer Internship I"],
-        6:["Career Path","Problem Solving through OOPS","Design of Steel Structures","Estimation and Costing","Open Elective","Employability Skills II","Programming Language Laboratory","Mini Project","CC & EC Activities II"]
+        5:["Hydrology (Integrated)","Design and Detailing of RC Structures (Integrated)","Environmental Engineering","Foundation Engineering","Career Path I","Open Elective I","Environmental Engineering Laboratory","Term Paper","Summer Internship I"],
+        6:["Career Path II (Integrated)","Problem Solving through OOPS","Design of Steel Structures","Estimation and Costing","Open Elective II","Employability Skills II","Programming Language Laboratory","Mini Project","CC & EC Activities II"]
    }
 
     var mech_sems_subjects={
         3:["Computer aided Machine Drawing (Integrated)","Manufacturing Technology (Integrated)","Engineering Mechanics","Fluid Mechanics and Hydraulic Machines","Kinematics of Machinery","Thermodynamics","Fluid Mechanics and Hydraulic Machines Lab","Computational Mathematics Lab"],    
         4:["Object Oriented Programming through Java","Applied Thermodynamics","Mechanics of Solids","Metal Cutting and Machine Tools","Dynamics of Machinery","Employability Skills I","Thermal Engineering Lab","Mechanics of Solids Lab","CC & EC Activities I"],
-        5:["Mechanical Measurements and Metrology (Integrated)","Computer Aided Design and Manufacturing (Integrated)","Steam and gas turbines","Design of Machine Members I","Career Path","Open Elective","Metal Cutting and Machine Tools Lab","Term Paper","Summer Internship I"],
-        6:["Career Path","Heat Transfer","Finite Element Methods","Design of Machine Members II","Open Elective","Employability Skills II","Heat Transfer Lab","Mini Project","CC & EC Activities II"]
+        5:["Mechanical Measurements and Metrology (Integrated)","Computer Aided Design and Manufacturing (Integrated)","Steam and gas turbines","Design of Machine Members I","Career Path I","Open Elective I","Metal Cutting and Machine Tools Lab","Term Paper","Summer Internship I"],
+        6:["Career Path II (Integrated)","Heat Transfer","Finite Element Methods","Design of Machine Members II","Open Elective II","Employability Skills II","Heat Transfer Lab","Mini Project","CC & EC Activities II"]
    }
 
     var chem_sems_subjects={
         3:["Object Oriented Programming Through Java (Integrated)","Momentum Transfer (Integrated)","Industrial Chemistry","Chemical Process Calculations","Introduction to Chemical Engineering","Chemical Engineering Thermodynamics","Computational Chemical Engineering Lab","Industrial Chemistry Lab"],    
         4:["Engineering Mathematics-III","Chemical Reaction Engineering-I","Process Heat Transfer","Mechanical Unit Operations","Chemical Technology","Employability Skills I","Process Heat Transfer Lab","Mechanical Unit Operations Lab","CC & EC Activities I"],
-        5:["Process Instrumentation and Control (Integrated)","Chemical Reaction Engineering – II (Integrated)","Engineering Economics & Project Management","Mass Transfer Operations - I","Career Path","Open Elective","Process Dynamics Control Lab","Term Paper","Summer Internship I"],
-        6:["Career Path","Process Equipment Design and Economics","Mass Transfer Operations II","Transport Phenomena","Open Elective","Employability Skills II","Mass Transfer Operations Lab","Mini Project","CC & EC Activities II"]
+        5:["Process Instrumentation and Control (Integrated)","Chemical Reaction Engineering – II (Integrated)","Engineering Economics & Project Management","Mass Transfer Operations - I","Career Path I","Open Elective I","Process Dynamics Control Lab","Term Paper","Summer Internship I"],
+        6:["Career Path II (Integrated)","Process Equipment Design and Economics","Mass Transfer Operations II","Transport Phenomena","Open Elective II","Employability Skills II","Mass Transfer Operations Lab","Mini Project","CC & EC Activities II"]
    }
 
     var eee_sems_subjects={
         3:["Engineering Mathematics III (Integrated)","Semiconductor Devices and Circuits (Integrated)","DC Machines and Transformers","Electrical Circuit Analysis","Electromagnetic Field Theory","Measurements and Instrumentation","DC Machines Lab","Electrical Circuits and Simulation Lab"],    
         4:["Linear and Digital Integrated Circuits","Power Generation, Transmission and Distribution","Power Electronics","Signals and Systems Theory","AC Machines","Employability Skills I","Measurements and Instrumentation Lab","AC Machines Lab","CC & EC Activities I"],
-        5:["Control Systems (Integrated)","Object Oriented Programming through Java (Integrated)","Power System Protection","Power Electronics","Career Path","Open Elective","Power Systems Lab","Term Paper","Summer Internship I"],
-        6:["Career Path","Engineering Economics and Project Management","Electrical Drives","Power System Analysis and Control","Open Elective","Employability Skills II","Power Electronics and Drives Lab","Mini Project","CC & EC Activities II"]
+        5:["Control Systems (Integrated)","Object Oriented Programming through Java (Integrated)","Power System Protection","Power Electronics","Career Path I","Open Elective I","Power Systems Lab","Term Paper","Summer Internship I"],
+        6:["Career Path II (Integrated)","Engineering Economics and Project Management","Electrical Drives","Power System Analysis and Control","Open Elective II","Employability Skills II","Power Electronics and Drives Lab","Mini Project","CC & EC Activities II"]
    }
 
     var ece_sems_subjects={
         3:["Linear Circuit Analysis (Integrated)","Signals & Systems (Integrated)","Complex Variables","Electronic Devices and Circuits","Logic Circuit Design","Random Variables and Stochastic Processes","Electronic Devices and Circuits Lab","Logic Circuit Design Lab"],    
         4:["Analog Electronic Circuits","Analog and Digital Communications","Linear Control Systems","Electromagnetic Fields and Waves","Object Oriented Programming","Employability Skills I","Object Oriented Programming Lab","Analog and Digital Communications Lab","CC & EC Activities I"],
-        5:["VLSI Design (Integrated)","Microprocessors and Microcontroller (Integrated)","Antennas and Microwave Engineering","Linear and Digital IC Applications","Career Path","Open Elective","Linear IC Applications Lab","Term Paper","Summer Internship I"],
-        6:["Career Path","Engineering Economics and Project Management","Cellular and Mobile Communications","Digital Signal Processing","Open Elective","Employability Skills II","Digital Signal Processing Lab","Mini Project","CC & EC Activities II"]
+        5:["VLSI Design (Integrated)","Microprocessors and Microcontroller (Integrated)","Antennas and Microwave Engineering","Linear and Digital IC Applications","Career Path I","Open Elective I","Linear IC Applications Lab","Term Paper","Summer Internship I"],
+        6:["Career Path II (Integrated)","Engineering Economics and Project Management","Cellular and Mobile Communications","Digital Signal Processing","Open Elective II","Employability Skills II","Digital Signal Processing Lab","Mini Project","CC & EC Activities II"]
    }
     // getting the sem & department
     var sem = document.getElementById("ssem").value;
