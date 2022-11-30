@@ -12,10 +12,6 @@ function checkdepartment(){
     sem.selectedIndex = 0;
 }
 
-function goback(){
-    window.location.replace("https://chakka-venkata-sai-kiran.github.io/AR20-SGPA-Calculator/");
-}
-
 function checksemester(){
     var table = document.getElementById("myTable");
     var n = table.rows.length - 2;
@@ -103,7 +99,7 @@ function checksemester(){
         alert("Please Select Department");
         var sem = document.getElementById("ssem");
         sem.selectedIndex = 0;
-        goback();
+        window.location.replace("https://chakka-venkata-sai-kiran.github.io/AR20-SGPA-Calculator/");
     }
     no_sem_subjects=sem_subjects.length;
     var count=2;
@@ -128,7 +124,7 @@ function calculate(){
     // checking sem is not selected but pressed submit
     if(sem.selectedIndex==0){
         window.alert("Select Sem");
-        goback();
+        window.location.replace("https://chakka-venkata-sai-kiran.github.io/AR20-SGPA-Calculator/");
     }
     // dictionary of sems with credits
     var total_sems_credits={
@@ -188,5 +184,5 @@ function calculate(){
         cell1.innerHTML = '<button onclick="goback()">Go Back</button>';
     }
     else
-        goback();
+        window.location.replace("https://chakka-venkata-sai-kiran.github.io/AR20-SGPA-Calculator/");
 }
