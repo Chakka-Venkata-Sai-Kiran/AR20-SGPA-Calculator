@@ -99,7 +99,7 @@ function checksemester(){
         alert("Please Select Department");
         var sem = document.getElementById("ssem");
         sem.selectedIndex = 0;
-        return;
+        window.location.replace("https://chakka-venkata-sai-kiran.github.io/AR20-SGPA-Calculator/");
     }
     no_sem_subjects=sem_subjects.length;
     var count=2;
@@ -124,7 +124,7 @@ function calculate(){
     // checking sem is not selected but pressed submit
     if(sem.selectedIndex==0){
         window.alert("Select Sem");
-        return;
+        window.location.replace("https://chakka-venkata-sai-kiran.github.io/AR20-SGPA-Calculator/");
     }
     // dictionary of sems with credits
     var total_sems_credits={
@@ -153,13 +153,13 @@ function calculate(){
         // checking if no value is entered
         if(marks==""){
             alert("Subject "+parseInt(i+1)+" GPA can't be empty");
-            return;
+            window.location.replace("https://chakka-venkata-sai-kiran.github.io/AR20-SGPA-Calculator/");
         }
 
         // checking for correct input
         if(marks>10 || marks<4){
             alert("Subject "+parseInt(i+1)+" GPA should lie between 4 & 10");
-            return;
+            window.location.replace("https://chakka-venkata-sai-kiran.github.io/AR20-SGPA-Calculator/");
         }
         nume = nume + sem_credits[i] * marks;
     }
@@ -178,5 +178,9 @@ function calculate(){
     // creating a roe for goback link
     var row = table.insertRow(no_sem_subjects+3);
     var cell1 = row.insertCell(0);
-    cell1.innerHTML = "<a href='index.html'><b>Go Back</b>";
+    cell1.innerHTML = '<button onclick="goback()">Go Back</button>';
+}
+
+function goback(){
+    window.location.replace("https://chakka-venkata-sai-kiran.github.io/AR20-SGPA-Calculator/");
 }
