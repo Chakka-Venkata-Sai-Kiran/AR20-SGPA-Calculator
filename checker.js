@@ -118,6 +118,10 @@ function checksemester(){
     }
 }
 
+function goback(){
+    window.location.replace("https://chakka-venkata-sai-kiran.github.io/AR20-SGPA-Calculator/");
+}
+
 function calculate(){
     var sem = document.getElementById("ssem");
 
@@ -185,8 +189,4 @@ function calculate(){
     }
     else
         goback();
-}
-
-function goback(){
-    window.location.replace("https://chakka-venkata-sai-kiran.github.io/AR20-SGPA-Calculator/");
 }
