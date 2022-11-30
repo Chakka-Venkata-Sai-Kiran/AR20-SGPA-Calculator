@@ -186,3 +186,6 @@ function calculate(){
     else
         window.location.replace("https://chakka-venkata-sai-kiran.github.io/AR20-SGPA-Calculator/");
 }
+function goback(){
+    window.location.replace("https://chakka-venkata-sai-kiran.github.io/AR20-SGPA-Calculator/");
+}
