@@ -184,7 +184,7 @@ function calculate(){
         cell1.innerHTML = '<button onclick="goback()">Go Back</button>';
     }
     else
-        window.location.replace("https://chakka-venkata-sai-kiran.github.io/AR20-SGPA-Calculator/");
+        window.location.reload(); 
 }
 function goback(){
     window.location.replace("https://chakka-venkata-sai-kiran.github.io/AR20-SGPA-Calculator/");
