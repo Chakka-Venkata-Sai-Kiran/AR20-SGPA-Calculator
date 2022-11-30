@@ -117,9 +117,6 @@ function checksemester(){
         count = count + 1;
     }
 }
-function delay(){
-    var temp=5;
-}
 function calculate(){
     var sem = document.getElementById("ssem");
 
@@ -154,17 +151,13 @@ function calculate(){
         // checking if no value is entered
         if(marks==""){
             alert("Subject "+parseInt(i+1)+" GPA can't be empty");
-            setTimeout(delay, 3000);
-            denom = denom - sem_credits[i];
-            i--;
+            return;
         }
 
         // checking for correct input
         else if(marks>10 || marks<4){
             alert("Subject "+parseInt(i+1)+" GPA should lie between 4 & 10");
-            setTimeout(delay, 3000);
-            denom = denom - sem_credits[i];
-            i--;
+            return;
         }
         else
             nume = nume + sem_credits[i] * marks;
