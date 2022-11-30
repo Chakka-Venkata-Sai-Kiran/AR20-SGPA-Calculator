@@ -118,7 +118,7 @@ function checksemester(){
     }
 }
 function delay{
-    
+    var temp=5;
 }
 function calculate(){
     var sem = document.getElementById("ssem");
