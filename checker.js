@@ -117,7 +117,7 @@ function checksemester(){
         count = count + 1;
     }
 }
-function delay{
+function delay(){
     var temp=5;
 }
 function calculate(){
