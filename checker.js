@@ -12,6 +12,10 @@ function checkdepartment(){
     sem.selectedIndex = 0;
 }
 
+function goback(){
+    window.location.replace("https://chakka-venkata-sai-kiran.github.io/AR20-SGPA-Calculator/");
+}
+
 function checksemester(){
     var table = document.getElementById("myTable");
     var n = table.rows.length - 2;
@@ -116,10 +120,6 @@ function checksemester(){
         cell2.innerHTML = temp;
         count = count + 1;
     }
-}
-
-function goback(){
-    window.location.replace("https://chakka-venkata-sai-kiran.github.io/AR20-SGPA-Calculator/");
 }
 
 function calculate(){
