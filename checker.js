@@ -117,7 +117,9 @@ function checksemester(){
         count = count + 1;
     }
 }
-
+function delay{
+    
+}
 function calculate(){
     var sem = document.getElementById("ssem");
 
@@ -140,7 +142,6 @@ function calculate(){
 
     // getting sem credits for particular sem
     var sem_credits=total_sems_credits[sem];
-    var flag=true;
     for(var i=0; i< no_sem_subjects;i++){
         // denominator summation of credits
         denom = denom + sem_credits[i];
@@ -153,38 +154,39 @@ function calculate(){
         // checking if no value is entered
         if(marks==""){
             alert("Subject "+parseInt(i+1)+" GPA can't be empty");
-            flag=false;
-            break;
+            setTimeout(delay, 3000);
+            denom = denom - sem_credits[i];
+            i--;
         }
 
         // checking for correct input
-        if(marks>10 || marks<4){
+        else if(marks>10 || marks<4){
             alert("Subject "+parseInt(i+1)+" GPA should lie between 4 & 10");
-            flag=false;
-            break;
+            setTimeout(delay, 3000);
+            denom = denom - sem_credits[i];
+            i--;
         }
-        nume = nume + sem_credits[i] * marks;
+        else
+            nume = nume + sem_credits[i] * marks;
     }
-    if(flag){
-        var sgpa=nume/denom;
-        sgpa = sgpa.toFixed(2); //Rounding off to 2 decimal places
-        var table = document.getElementById("myTable");     //Deleting the subimt & reset after caluclation
-        table.deleteRow(no_sem_subjects+2);
-        
-        // creating new row with 2 cells for SGPA & result
-        var row = table.insertRow(no_sem_subjects+2);
-        var cell1 = row.insertCell(0);
-        var cell2 = row.insertCell(1);
-        cell1.innerHTML = "<b>SGPA:</b>";
-        cell2.innerHTML = sgpa;
+    
+    var sgpa=nume/denom;
+    sgpa = sgpa.toFixed(2); //Rounding off to 2 decimal places
+    var table = document.getElementById("myTable");     //Deleting the subimt & reset after caluclation
+    table.deleteRow(no_sem_subjects+2);
 
-        // creating a roe for goback link
-        var row = table.insertRow(no_sem_subjects+3);
-        var cell1 = row.insertCell(0);
-        cell1.innerHTML = '<button onclick="goback()">Go Back</button>';
-    }
-    else
-        window.location.reload(true); 
+    // creating new row with 2 cells for SGPA & result
+    var row = table.insertRow(no_sem_subjects+2);
+    var cell1 = row.insertCell(0);
+    var cell2 = row.insertCell(1);
+    cell1.innerHTML = "<b>SGPA:</b>";
+    cell2.innerHTML = sgpa;
+
+    // creating a roe for goback link
+    var row = table.insertRow(no_sem_subjects+3);
+    var cell1 = row.insertCell(0);
+    cell1.innerHTML = '<button onclick="goback()">Go Back</button>';
+
 }
 function goback(){
     window.location.replace("https://chakka-venkata-sai-kiran.github.io/AR20-SGPA-Calculator/");
