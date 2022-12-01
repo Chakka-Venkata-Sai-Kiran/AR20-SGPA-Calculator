@@ -18,5 +18,5 @@ select{
     height: 20px;
 }
 body{
-    background-color: RGB(163, 160, 163);
+    background-image: url(./static/Back.jpg) !important;
 }
