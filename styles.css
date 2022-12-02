@@ -20,4 +20,5 @@ select{
 body{
     background-image: url(./static/Back.jpg) !important;
     background-repeat: no-repeat !important;
+    background-size: cover;
 }
